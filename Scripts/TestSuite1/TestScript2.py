@@ -21,21 +21,16 @@ class  my_test(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
-if __name__ == 'TestScript2' or __name__ == '__main__':
 
-    testcase=unittest.TestLoader().loadTestsFromTestCase(my_test)
-    testsuite = unittest.TestSuite(testcase)
+testcase=unittest.TestLoader().loadTestsFromTestCase(my_test)
+testsuite = unittest.TestSuite(testcase)
 
-    report_file = "./result.html"
-    import sys
-
-    with open(report_file, 'w') as report:
-        runner = HTMLTestRunner(stream=report, verbosity=3,
-                 descriptions="unit test resulf amazon", failfast=True, buffer=False,
-                 report_title="My Test Report", report_name="report name", template=None, resultclass=None,
-                 add_timestamp=True, open_in_browser=False,
-                 combine_reports=False, template_args=None)
-        runner.run(testsuite)
+runner = HTMLTestRunner(output='../../Report/', verbosity=3,
+         descriptions="unit test resulf amazon", failfast=True, buffer=False,
+         report_title="My Test Report", report_name="report name", template=None, resultclass=None,
+         add_timestamp=True, open_in_browser=False,
+         combine_reports=False, template_args=None)
+runner.run(testsuite)
 
 
 
