@@ -21,14 +21,12 @@ class  my_test(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
-
-testcase=unittest.TestLoader().loadTestsFromTestCase(my_test)
-testsuite = unittest.TestSuite(testcase)
+testsuite=unittest.TestLoader().loadTestsFromTestCase(my_test)
 
 runner = HTMLTestRunner(output='../../Report/', verbosity=3,
          descriptions="unit test resulf amazon", failfast=True, buffer=False,
          report_title="My Test Report", report_name="report name", template=None, resultclass=None,
-         add_timestamp=True, open_in_browser=False,
+         add_timestamp=True, open_in_browser=True,
          combine_reports=False, template_args=None)
 runner.run(testsuite)
 

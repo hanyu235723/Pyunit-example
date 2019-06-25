@@ -1,13 +1,15 @@
 
 
-class A:
-    class B:
-        class C:
-            def me(self):
-                print(self.__module__)
-                print(type(self).__name__)
-                print(type(self).__qualname__)
-                print(repr(self))
+class A ():
+    def __init__(self,name):
+        print (name)
+    def __call__(self, *args, **kwargs):
+        print ("call")
 
-c=A.B.C()
-c.me()
+class a(A):
+    pass
+
+l=["a",'b','c','d','f']
+print(list(map(a,l)))
+
+
