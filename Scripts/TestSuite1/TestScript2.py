@@ -2,7 +2,6 @@ from selenium import webdriver
 import unittest
 from HtmlTestRunner import HTMLTestRunner
 
-
 from Scripts.PO.homePage import *
 from Scripts.PO.SearchResultPage import SearchResultsPage
 
