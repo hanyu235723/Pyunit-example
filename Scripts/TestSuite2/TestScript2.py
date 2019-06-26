@@ -5,7 +5,7 @@ from HtmlTestRunner import HTMLTestRunner
 from Scripts.PO.homePage import *
 from Scripts.PO.SearchResultPage import SearchResultsPage
 
-class  my_test(unittest.TestCase):
+class  my_test2(unittest.TestCase):
     def setUp(self):
 
         self.driver = webdriver.Chrome("C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe")
@@ -20,7 +20,7 @@ class  my_test(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
-testsuite=unittest.TestLoader().loadTestsFromTestCase(my_test)
+testsuite=unittest.TestLoader().loadTestsFromTestCase(my_test2)
 
 runner = HTMLTestRunner(output='../../Report/', verbosity=3,
         template=None, resultclass=None,
