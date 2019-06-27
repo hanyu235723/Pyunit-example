@@ -12,7 +12,7 @@ class  my_test2(unittest.TestCase):
 
     def test_search(self):
         homepage= HomePage(self.driver)
-        homepage.search_by("swim suit")
+        homepage.search_by("ball")
         search_results_page=SearchResultsPage(self.driver)
 
         assert search_results_page.is_results_found()
